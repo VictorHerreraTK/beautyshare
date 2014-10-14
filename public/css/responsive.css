@@ -1,0 +1,9 @@
+@media only screen  and (max-width : 767px) {
+	body div.container div.row div.swiper-container,
+	body div.container div.row div.swiper-container-2{
+	 display: block;
+	}
+	body div.container div.row div.videos-web{
+		display: none;
+	}
+}
