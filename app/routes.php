@@ -21,3 +21,4 @@ Route::get('/landing', function()
 	return View::make('landing');
 });
 Route::post('/register'  , array('as' => 'register'  , 'uses' => 'UserController@store' ));
+Route::get('/inscription'  , array('as' => 'inscription'  , 'uses' => 'UserController@create' ));

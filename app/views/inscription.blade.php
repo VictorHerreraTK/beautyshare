@@ -15,7 +15,7 @@
 
 	{{ HTML::script('//code.jquery.com/jquery-1.11.0.min.js') }}
 	{{ HTML::script('js/idangerous.swiper-2.1.min.js') }}
-	{{ HTML::script('js/main.js') }}
+	{{ HTML::script('js/form-multistep.js') }}
 
 
 	<style type="text/css">
@@ -29,7 +29,7 @@
 		}
 	</style>
 </head>
-<body>
+<body class="mysite">
 <nav class="navbar navbar-default" role="navigation">
 	<div class="container">
 		<div class="navbar-header navbar-left">
@@ -46,7 +46,59 @@
 
 <div class="container">
 	<div class="row">
+		<!-- multistep form -->
+<form id="msform">
+	<!-- progressbar -->
+	<h1>My Site</h1>
+	<ul id="progressbar">
+		<li class="active">1</li>
+		<li>2</li>
+		<li>3</li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>
+		<div>
+			<h3 class="fs-subtitle">¿Qué es lo que te motiva a empezar tu propio negocio?</h3>
+			<div class="col-md-4">
+				<img src="http://placehold.it/200x200" class="img-responsive">
+				{{ Form::radio('site-img', 1, false, ['class' => 'field']) }}
+			</div>
+			<div class="col-md-4">
+				<img src="http://placehold.it/200x200" class="img-responsive">
+				{{ Form::radio('site-img', 2, false, ['class' => 'field']) }}
+			</div>
+			<div class="col-md-4">
+				<img src="http://placehold.it/200x200" class="img-responsive">
+				{{ Form::radio('site-img', 3, false, ['class' => 'field']) }}
+			</div>
+		</div>
 		
+			<input type="button" name="next" class="next action-button" value="Next" />
+		
+	</fieldset>
+	<fieldset>
+		<div>
+			<h2 class="fs-title">¿Lo que estas haciendo hoy, te acerca al lun donde quieres estar mañana?</h2>
+			<h3 class="fs-subtitle">Cada día es un nuevo comienzo. Lo mejor, está por venir y con Beauty Share lo puedes lograr. ¿Y tú, dónde quieres estar mañana? ¡Cuéntanos!</h3>
+			<input type="text" name="twitter" placeholder="Mi sueño es..." />
+			<div class="col-md-6">
+				<iframe  src="//www.youtube.com/embed/pHIB5osmZGA?modestbranding=1&controls=0&rel=0&showinfo=0" frameborder="0" allowfullscreen></iframe></div>
+			<div class="col-md-6"></div>
+		</div>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">Personal Details</h2>
+		<h3 class="fs-subtitle">We will never sell it</h3>
+		<input type="text" name="fname" placeholder="First Name" />
+		<input type="text" name="lname" placeholder="Last Name" />
+		<input type="text" name="phone" placeholder="Phone" />
+		<textarea name="address" placeholder="Address"></textarea>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="submit" name="submit" class="submit action-button" value="Submit" />
+	</fieldset>
+</form>
 	</div>
 </div>
 

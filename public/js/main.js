@@ -17,7 +17,7 @@ $(document).ready(function(){
     	mode:'horizontal',
     	loop: true
   });
-  setInterval(function(){changeBackground()},30000);
+  setInterval(function(){changeBackground()},12000);
   changeBackground();
 
   $(".inscription-submit-top").click(function(){
@@ -29,6 +29,9 @@ $(document).ready(function(){
     submitFunction(form);
   });
   
+
+
+  
 });
 
 
@@ -37,16 +40,13 @@ function submitFunction(form){
 }
 
 function changeBackground(){
-  setTimeout(function(){$(".image-1").fadeOut(2000)},3000);
-  //5 seg
-  setTimeout(function(){$(".image-2").fadeIn(2000)},8000);
-  //10 seg
-  setTimeout(function(){$(".image-2").fadeOut(2000)},12000);
-  //15seg
-  setTimeout(function(){$(".image-3").fadeIn(2000)},18000);
-  //20seg
-   setTimeout(function(){$(".image-3").fadeOut(2000)},22000);
-  //25seg
-   setTimeout(function(){$(".image-1").fadeIn(2000)},28000); 
-  //30seg
+  setTimeout(function(){$(".image-1").fadeOut(2000)},4000);
+  //6 seg
+  setTimeout(function(){$(".image-2").fadeIn(2000)},4000);
+  //6 seg
+  setTimeout(function(){$(".image-2").fadeOut(2000)},10000);
+  //12seg
+  setTimeout(function(){$(".image-1").fadeIn(2000)},10000);
+  //12seg
 }
+

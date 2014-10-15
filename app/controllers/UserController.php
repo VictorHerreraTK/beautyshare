@@ -20,7 +20,7 @@ class UserController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('inscription');
 	}
 
 
@@ -48,7 +48,7 @@ class UserController extends \BaseController {
 			$user->email 	= Input::get('email');
 			$user->password = Hash::make(Input::get('password'));
 			$user->save();
-			return Redirect::back()->with("msg","Creado");
+			return Redirect::back()->with("msg","U");
 		}
 		
 
@@ -75,7 +75,7 @@ class UserController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+		
 	}
 
 
